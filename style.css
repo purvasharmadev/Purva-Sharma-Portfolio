@@ -26,6 +26,24 @@ hr {
     max-width: 600px;
     margin: auto;
 }
+/* -------------------------------- */
+/* Row And Columns */
+.row{
+    margin-top: 1rem;
+    display: inline;
+}
+.column{
+    
+    float: left;
+    width: 50%;
+}
+/* Clear floats after the columns */
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/* ---------------------------------- */
 
 /** links **/
 .link {
@@ -47,8 +65,8 @@ hr {
     border-radius: 0.5rem;
     border: 1px solid var(--primary-color);
 }
-
-.blogs a{
+/* -------------------------------------------- */
+.button a{
     display: inline-block;
     margin-top: 1.5rem;
 }
@@ -121,6 +139,7 @@ hr {
 
 .section h1 {
     text-align: center;
+    font-size: 3vw;
 
 }
 
@@ -152,5 +171,40 @@ hr {
 .footer ul {
     padding-inline-start: 0px;
 }
+/* ----------------------------------- */
+/* For responsive layout */
+@media screen and (max-width:600px){
+    .column{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 400px) {
+    body{
+        padding: 0%;
+        margin: 0%;
+        text-align: justify;
+    }
+    .navigation{
+        width: 100%;
+        
+    }
+    .navigation a {
+      float: none;
+      width: 100%;
+      text-align: right;
+    }
+    .column .hero-img{
+        max-width:100%;
+        height: auto;
 
-/* Spaces */
+    }
+    .column .hero-heading{
+        font-size: 100%;
+    }
+   .section h1{
+      font-size: 100%;  
+    }
+  }
+
+ 
+/* ----------------------------------- */
