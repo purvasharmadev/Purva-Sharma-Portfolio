@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 :root {
-    --primary-color: #7C3AED;
+    --primary-color:#374151;
     --off-white: #F3F4F6;
     --dark-gray: #6B7280;
 }
 
 body {
+  
     font-family: 'Montserrat', sans-serif;
     margin: auto;
     padding: 0rem 3rem;
@@ -17,8 +17,9 @@ hr {
     margin: 2rem 0rem;
 }
 
-/** container **/
+/** container #7C3AED**/
 .container {
+
     padding: 0rem 1rem;
 }
 
@@ -32,6 +33,7 @@ hr {
     margin-top: 1rem;
     display: inline;
 }
+
 .column{
     
     float: left;
@@ -43,6 +45,17 @@ hr {
     display: table;
     clear: both;
 }
+
+.row-2{
+    margin-top: 1rem;
+    display: inline;
+}
+.row-2:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* ---------------------------------- */
 
 /** links **/
@@ -66,10 +79,11 @@ hr {
     border: 1px solid var(--primary-color);
 }
 /* -------------------------------------------- */
-.button a{
+.link-button a{
     display: inline-block;
     margin-top: 1.5rem;
 }
+
 /** look into BEM naming convention for CSS **/
 
 /** lists **/
@@ -82,7 +96,13 @@ hr {
     display: inline;
     padding: 0rem 0.5rem;
 }
-
+.list{
+    text-align: justify;
+}
+.list a{
+    display: inline-block;
+    margin-top:1.5rem ;
+}
 /** navigation **/
 
 .navigation {
@@ -93,6 +113,7 @@ hr {
 }
 
 .navigation .nav-brand {
+    color: var(--off-white);
     font-weight: bold;
 }
 
@@ -130,6 +151,11 @@ hr {
 .hero .hero-heading .heading-inverted {
     color: var(--primary-color);
 }
+.hero h3{
+    padding: none;
+    text-align: center;
+    color: var(--primary-color);
+}
 
 /** sections **/
 
@@ -138,16 +164,97 @@ hr {
 }
 
 .section h1 {
-    text-align: center;
-    font-size: 3vw;
+    text-align: left;
+    font-size: 2vw;
+    color: var(--primary-color);
 
+}
+
+.section .highlight{
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .ow {
     background-color: var(--off-white);
     border-radius: 1rem;
 }
+/* ----------------------------------- */
+/* Project.html */
 
+.project-img{
+    max-width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.project-container{
+    margin: auto;
+    max-width: 90%;
+    text-align: center;
+    margin-bottom: 6rem;
+   padding: 2rem;
+}
+
+.project-list h2{
+    color:var(--dark-gray);
+}
+.project-list p{
+    font-family: 'Source Sans Pro', sans-serif;
+
+
+}
+/* ----------------------------------- */
+/* blogs.html */
+.blog-img{
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+/* ------------------------------------ */
+/* blog-detail.html */
+.blog-meta{
+	font-size:14px;
+	
+    }
+.blog{
+    margin:0;
+    padding-left: 0.5rem;
+    background-color:var(--primary-color);
+  }
+    .card{
+	    padding:1rem;
+        background-color:var(--off-white);
+    
+    }
+    code {
+        color: crimson;
+        font-weight: bolder;
+        font-size: 100%;
+      }
+.section code{
+    max-width: 100%;
+    max-height: 100%;
+    text-align: justify;
+    color: ;
+}
+.card h3{
+    text-align: center;
+}
+ .highlight{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.blog-next-button a:hover{
+    background-color: var(--dark-gray);
+    color: var(--off-white);
+    }
+
+/* --------------- */
 /** footers **/
 
 .footer {
@@ -158,9 +265,13 @@ hr {
     border-top-right-radius: 1rem;
 }
 
-/footer .footer-header{
+.footer .footer-header{
     font-weight: bold;
     font-size: large;
+
+}
+.footer .footer-copyright{
+    font-size: small;
 
 }
 
@@ -171,18 +282,67 @@ hr {
 .footer ul {
     padding-inline-start: 0px;
 }
+
+.fa {  
+    
+    font-size: 15px; 
+    border-bottom-left-radius: 1rem; 
+    border-top-right-radius: 1rem;
+  
+  }  
+
+  .fa:hover {  
+    opacity: 0.9; 
+    color: var(--primary-color);
+}   
+  .fa-instagram {  
+    background: var(--dark-gray);  
+    color: white;  
+  } 
+  .fa-twitter {  
+    background: var(--dark-gray);  
+    color: white;  
+  } 
+  .fa-linkedin {  
+    background: var(--dark-gray);  
+    color: white;  
+  } 
+  .fa-github {  
+    background: var(--dark-gray);  
+    color: white;  
+  } 
 /* ----------------------------------- */
-/* For responsive layout */
-@media screen and (max-width:600px){
-    .column{
-        width: 100%;
+/* For responsive layout  
+    }*/
+@media screen and (max-width:650px){
+    
+        .column{
+
+            width: 100%;
+        }
+        .row-2 {
+            display: none;
+            
+        }
+    } 
+   
+@media screen and (min-width:650px){
+     .link-button{
+        display: none;
     }
-}
-@media screen and (max-width: 400px) {
-    body{
-        padding: 0%;
-        margin: 0%;
-        text-align: justify;
+     .blog{
+        max-width: 100%;
+        text-align: left;
+        margin: 0rem;
+    }
+    .card{
+        max-width: 100%;
+        text-align: left;
+        margin: 0rem;
+
+    }
+    .blog-img{
+       max-width: 500px;
     }
     .navigation{
         width: 100%;
@@ -191,18 +351,50 @@ hr {
     .navigation a {
       float: none;
       width: 100%;
-      text-align: right;
+
+    }
+   
+    
+}
+
+
+
+@media screen and (max-width: 650px) {
+    .column{
+
+        width: 100%;
+    }
+    .row-2 {
+        display: none;
+        
+    }
+    body{
+       
+        margin: 0%;
+        text-align: justify;
+    }
+    .navigation{
+        width: 90%;
+        text-align: center;
+        
+    }
+    .navigation a {
+      float: none;
+      width: 100%;
+
+
     }
     .column .hero-img{
         max-width:100%;
         height: auto;
 
     }
-    .column .hero-heading{
-        font-size: 100%;
+   .hero-heading{
+        font-size: 35px;
+        color: yellowgreen;
     }
    .section h1{
-      font-size: 100%;  
+      font-size: 30px;  
     }
   }
 
