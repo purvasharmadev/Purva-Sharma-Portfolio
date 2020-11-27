@@ -254,6 +254,10 @@ hr {
     color: var(--off-white);
     }
 
+    .blog-next-button {
+        padding:0rem 1rem ;
+        }
+
 /* --------------- */
 /** footers **/
 
