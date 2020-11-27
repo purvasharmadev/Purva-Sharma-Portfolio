@@ -257,7 +257,13 @@ hr {
     .blog-next-button {
         padding:0rem 1rem ;
         }
-
+        .blog-button {  
+            color: var(--primary-color);
+            border-radius: 0.5rem;
+            border: 1px solid var(--primary-color);
+            padding: 0rem 1rem;
+            margin-top: 5rem;
+          }  
 /* --------------- */
 /** footers **/
 
@@ -400,6 +406,10 @@ hr {
    .section h1{
       font-size: 30px;  
     }
+    .blog-next-button {
+        padding:0rem 1rem ;
+        }
+
   }
 
  
